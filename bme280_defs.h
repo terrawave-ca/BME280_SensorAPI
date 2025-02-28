@@ -316,7 +316,7 @@ typedef BME280_INTF_RET_TYPE (*bme280_write_fptr_t)(uint8_t reg_addr, const uint
  *                                  for interface related call backs
  *
  */
-typedef void (*bme280_delay_us_fptr_t)(uint32_t period, void *intf_ptr);
+typedef void (*bme280_delay_ms_fptr_t)(uint32_t period, void *intf_ptr);
 
 /******************************************************************************/
 /*!  @name         Structure Declarations                             */
@@ -485,7 +485,7 @@ struct bme280_dev
     bme280_write_fptr_t write;
 
     /*! Delay function pointer */
-    bme280_delay_us_fptr_t delay_us;
+    bme280_delay_ms_fptr_t delay_ms;
 
     /*! Trim data */
     struct bme280_calib_data calib_data;
