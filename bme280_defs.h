@@ -203,7 +203,7 @@
 #define BME280_CTRL_TEMP_MSK                      UINT8_C(0xE0)
 #define BME280_CTRL_TEMP_POS                      UINT8_C(0x05)
 
-/*! @name Measurement delay calculation macros  */
+/*! @name Measurement delay calculation macros (us)  */
 #define BME280_MEAS_OFFSET                        UINT16_C(1250)
 #define BME280_MEAS_DUR                           UINT16_C(2300)
 #define BME280_PRES_HUM_MEAS_OFFSET               UINT16_C(575)

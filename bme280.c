@@ -837,7 +837,7 @@ int8_t bme280_cal_meas_delay(uint32_t *max_delay, const struct bme280_settings *
         }
 
         (*max_delay) =
-            (uint32_t)((BME280_MEAS_OFFSET + (BME280_MEAS_DUR * temp_osr) +
+            (uint32_t)(0.001 * (BME280_MEAS_OFFSET + (BME280_MEAS_DUR * temp_osr) +
                         ((BME280_MEAS_DUR * pres_osr) + BME280_PRES_HUM_MEAS_OFFSET) +
                         ((BME280_MEAS_DUR * hum_osr) + BME280_PRES_HUM_MEAS_OFFSET)));
     }
